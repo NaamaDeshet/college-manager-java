@@ -19,15 +19,13 @@ A console application for managing the academic staff of a college: lecturers, s
   - OCP: committee-chair eligibility is a polymorphic method, so new degree types need no changes to existing logic.
   - ISP / DIP: storage is split into `ILoader` and `ISaver` interfaces, and the code depends on interfaces (`Set`, `IDataStorage`) rather than concrete classes.
 - **Java Collections:** `HashSet` for data, `TreeSet` with `Comparator` for dynamic sorting, `Iterator` for traversal.
-- **Documentation:** UML class, sequence, state and use-case diagrams are in [`docs/`](docs/).
+- **Documentation:** UML class, sequence, state and use-case diagrams are available as PDF files in the repository root (`Class Diagram.pdf`, `Sequence Diagram.pdf`, `state diagram.pdf`, `use case diagram.pdf`).
 
 ## Run
 
 Requires Java 8 or later. From the repository root:
 
-```bash
-javac NewProject/*.java
-java NewProject.Main
-```
+javac -d out *.java
+java -cp out NewProject.Main
 
 Choose actions from the text menu. To save your data, exit with option `0`.
